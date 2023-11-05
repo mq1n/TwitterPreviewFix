@@ -53,10 +53,10 @@ module.exports = !global.ZeresPluginLibrary ? Dummy : (([Plugin, Api]) => {
 			}
 
 			onStart() {
-				const DeviceStore = WebpackModules.getByProps('jumpToMessage');   
-				if (DeviceStore?._sendMessage) {
+				const MessageStore = WebpackModules.getByProps('jumpToMessage');   
+				if (MessageStore?._sendMessage) {
 					Patcher.before(
-						DeviceStore,
+						MessageStore,
 						'sendMessage',
 						(_, args, ret) => {
 							args[1].content = this.substitute(args[1].content);
@@ -67,7 +67,7 @@ module.exports = !global.ZeresPluginLibrary ? Dummy : (([Plugin, Api]) => {
 			}
 
 			onStop() {
-				Patcher.unpatchAll()
+				Patcher.unpatchAll();
 			}
 
 			substitute (message) {
