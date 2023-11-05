@@ -4,8 +4,8 @@
  * @authorId 267708018693636097
  * @version 1.0.0
  * @description Bring back Twitter link previews in Discord messages with this BetterDiscord addon
- * @source ...
- * @updateUrl ...
+ * @source https://github.com/mq1n/TwitterPreviewFix/
+ * @updateUrl https://raw.githubusercontent.com/mq1n/TwitterPreviewFix/main/TwitterPreviewFix.plugin.js
  */
 
 const config = {
@@ -16,7 +16,7 @@ const config = {
 				name: "mq1n"
 			}
 		],
-		version: "0.0.1",
+		version: "1.0.0",
 		description: "Bring back Twitter link previews in Discord messages with this BetterDiscord addon"
 	},
 	changelog: [
